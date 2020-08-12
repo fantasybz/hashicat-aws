@@ -1,8 +1,4 @@
-resource "aws_vpc" "main" {
-  cidr_block       = "10.0.0.0/16"
-  instance_tenancy = "default"
-
-  tags = {
-    Name = "main"
-  }
+module "vpc" {
+  source  = "app.terraform.io/kochi-training/vpc/aws"
+  version = "2.44.0"
 }
